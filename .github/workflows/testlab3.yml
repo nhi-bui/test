@@ -1,0 +1,17 @@
+name: Simple Actions
+
+on: [push]
+
+jobs:
+  simple-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Echo a message
+        run: echo "Hello, GitHub Actions! This is a simple workflow."
+
+      - name: List repository files
+        run: ls -la
